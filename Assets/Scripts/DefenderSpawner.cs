@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -196,7 +194,7 @@ public class DefenderSpawner : MonoBehaviour, IPointerDownHandler, IPointerEnter
             _fieldsArray[Convert.ToInt32(_gridPos.x)-1, Convert.ToInt32(_gridPos.y)-1] = 1;
 
             // spend resources
-            Registry.ResourceSystem?.SetAmount(_costArray[_selectedDefender]);
+            ResourceSystem.SetAmount(_costArray[_selectedDefender]);
         }
     }
 
@@ -230,7 +228,7 @@ public class DefenderSpawner : MonoBehaviour, IPointerDownHandler, IPointerEnter
         }
 
         // if not enough resources
-        else if (fullCheck && !Registry.ResourceSystem.CheckAmount(_costArray[_selectedDefender]))
+        else if (fullCheck && !ResourceSystem.CheckAmount(_costArray[_selectedDefender]))
         {
             return false;
         }
@@ -262,7 +260,7 @@ public class DefenderSpawner : MonoBehaviour, IPointerDownHandler, IPointerEnter
     {
         if (i < _toolTipArray.Length)
         {
-            Registry.ResourceSystem?.ShowToolTip(_toolTipArray[i]);
+            TextSystem.UpdateWarningTextField(_toolTipArray[i]);
         }
     }
 }

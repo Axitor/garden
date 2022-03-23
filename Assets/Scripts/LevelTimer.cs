@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Axitor.Utils;
 
 public class LevelTimer : MonoBehaviour
@@ -11,7 +8,6 @@ public class LevelTimer : MonoBehaviour
     /// Editable fields
     /// </summary>
     [SerializeField] private int _levelTimerSeconds = 100;
-    [SerializeField] private Text _timerText;
 
     /// <summary>
     /// Private fields
@@ -33,7 +29,7 @@ public class LevelTimer : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if(!_isFinished && _timerText != null && Time.timeSinceLevelLoad != _prevTimeSinceLevelLoad)
+        if(!_isFinished && Time.timeSinceLevelLoad != _prevTimeSinceLevelLoad)
         {
             if (Time.timeSinceLevelLoad <= _levelTimerSeconds && 0 < (_levelTimerSeconds - Time.timeSinceLevelLoad))
             {
@@ -41,7 +37,7 @@ public class LevelTimer : MonoBehaviour
                 _prevTimeSinceLevelLoad = Time.timeSinceLevelLoad;
 
                 TimeSpan time = TimeSpan.FromSeconds(_levelTimerSeconds - Time.timeSinceLevelLoad);
-                _timerText.text = time.ToString(@"hh\:mm\:ss");
+                TextSystem.UpdateLevelTimerTextField(time.ToString(@"hh\:mm\:ss"));
             }
             else
             {

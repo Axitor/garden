@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Axitor.Utils;
@@ -8,7 +7,7 @@ using Axitor.Utils;
 public static class ScoreSystem
 {
     /// <summary>
-    /// Public propertiws
+    /// Public properties
     /// </summary>
     public static int MaxScoreLines { get { return _maxScoreLines; } }
 

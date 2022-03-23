@@ -21,7 +21,7 @@ namespace Axitor.Utils
         /// <summary>
         /// Delegates
         /// </summary>
-        private static Action onLoadCallback;
+        private static Action _onLoadCallback;
 
         /// <summary>
         /// Scenes
@@ -44,7 +44,7 @@ namespace Axitor.Utils
         /// </summary> 
         public static void LoadAsync(int num)
         {
-            onLoadCallback = () =>
+            _onLoadCallback = () =>
             {
                 GameObject dummyLoadingObject = new GameObject("DummyLoadingObject");
                 dummyLoadingObject.AddComponent<DummyLoadingClass>().StartCoroutine(LoadAsyncCoroutine(num));
@@ -85,10 +85,10 @@ namespace Axitor.Utils
         /// </summary>
         public static void LoadCallback()
         {
-            if (onLoadCallback != null)
+            if (_onLoadCallback != null)
             {
-                onLoadCallback();
-                onLoadCallback = null;
+                _onLoadCallback();
+                _onLoadCallback = null;
             }
         }
 

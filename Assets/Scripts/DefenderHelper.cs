@@ -21,7 +21,7 @@ public class DefenderHelper : MonoBehaviour
     /// </summary>
     private void ResourceSystemAdd()
     {
-        Registry.ResourceSystem?.AddAmount();
+        ResourceSystem.AddAmount();
     }
 
     /// <summary>

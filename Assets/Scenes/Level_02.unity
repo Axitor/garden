@@ -380,6 +380,7 @@ Transform:
   - {fileID: 1760289235}
   - {fileID: 94852398}
   - {fileID: 258628148}
+  - {fileID: 2053334888}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -699,6 +700,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &2053334887
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 975547337}
+    m_Modifications:
+    - target: {fileID: 3024962527696136636, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: _lifeTextField
+      value: 
+      objectReference: {fileID: 834213600}
+    - target: {fileID: 3024962527696136636, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: _starsTextField
+      value: 
+      objectReference: {fileID: 698429922}
+    - target: {fileID: 3024962527696136636, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: _warningTextField
+      value: 
+      objectReference: {fileID: 1274874873}
+    - target: {fileID: 3024962527696136636, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: _levelTimerTextField
+      value: 
+      objectReference: {fileID: 1413279480}
+    - target: {fileID: 3024962527696136636, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: _enemyKilledTextField
+      value: 
+      objectReference: {fileID: 1528666882}
+    - target: {fileID: 3024962527696136636, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: _enemyKilledLevelTextField
+      value: 
+      objectReference: {fileID: 336326300}
+    - target: {fileID: 3024962527696136636, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: _menuButtonLevelNumTextField
+      value: 
+      objectReference: {fileID: 1369950378}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856691734254079027, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+      propertyPath: m_Name
+      value: TextSystem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+--- !u!4 &2053334888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4999739180938599069, guid: d820d7dd25d22694ab9ea1f162a160ac, type: 3}
+  m_PrefabInstance: {fileID: 2053334887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &605208645486595606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1709,6 +1800,10 @@ PrefabInstance:
       propertyPath: _buttonsText
       value: 
       objectReference: {fileID: 1274874873}
+    - target: {fileID: 5192237325492328634, guid: cdfdc26006affba4885f966d25271446, type: 3}
+      propertyPath: _starsAmount
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5192237325492328636, guid: cdfdc26006affba4885f966d25271446, type: 3}
       propertyPath: m_Name
       value: ResourceSystem

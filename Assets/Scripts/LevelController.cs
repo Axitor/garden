@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using Axitor.Utils;
 
 public class LevelController : MonoBehaviour
@@ -11,10 +6,6 @@ public class LevelController : MonoBehaviour
     /// <summary>
     /// Editable fields
     /// </summary>
-    [SerializeField] private Text _lifeText;
-    [SerializeField] private Text _enemyText;
-    [SerializeField] private Text _enemyLevelText;
-    [SerializeField] private Text _menuButtonText;
     [SerializeField] private Canvas _gameMenu;
     [SerializeField] private Canvas _canvasWin;
     [SerializeField] private Canvas _canvasFail;
@@ -32,9 +23,6 @@ public class LevelController : MonoBehaviour
 
         // Hide game menu & canvas
         GameMenuHideAllMesssages();
-
-        // Show level num
-        _menuButtonText.text = "Level " + SceneLoader.GetLevelNum().ToString();
     }
 
     /// <summary>
@@ -42,24 +30,11 @@ public class LevelController : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        // Update texts
-        UpdateText();
-
         // Show how to play for the first level
         if (SceneLoader.GetLevelNum() == 1)
         {
             HowToPlayShow();
         }
-    }
-
-    /// <summary>
-    /// Update text
-    /// </summary>
-    public void UpdateText()
-    {
-        _lifeText.text = LifeSystem.LivesAmount.ToString();
-        _enemyText.text = Registry.DeadEnemyAmount.ToString();
-        _enemyLevelText.text = Registry.AttackerSpawner?.DeadLevelEnemyAmount.ToString() + "/" + Registry.AttackerSpawner?.MaxLevelEnemyAmount.ToString();
     }
 
     /// <summary>
@@ -85,7 +60,7 @@ public class LevelController : MonoBehaviour
         {
             // Update lives
             LifeSystem.DeleteLife();
-            UpdateText();
+            TextSystem.UpdateLifeTextField(LifeSystem.LivesAmount.ToString());
 
             // Check lives & show a message
             if (LifeSystem.LivesAmount <= 0)
@@ -170,7 +145,7 @@ public class LevelController : MonoBehaviour
     {
         // Update life amount & text
         LifeSystem.AddLivesBuyAmount();
-        UpdateText();
+        TextSystem.UpdateLifeTextField(LifeSystem.LivesAmount.ToString());
 
         // Show a message
         _canvasFail.enabled = false;

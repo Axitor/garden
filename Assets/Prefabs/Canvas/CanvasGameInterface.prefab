@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 4738803534790737008}
   - component: {fileID: 4738803534790737011}
   m_Layer: 5
-  m_Name: ButtonsText
+  m_Name: ButtonsWarningText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4738803535133220933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,7 +1317,7 @@ GameObject:
   - component: {fileID: 4738803535163686689}
   - component: {fileID: 4738803535163686688}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelNumText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1961,7 +1961,7 @@ GameObject:
   - component: {fileID: 4738803535670804809}
   - component: {fileID: 4738803535670804812}
   m_Layer: 5
-  m_Name: ButtonMenu
+  m_Name: ButtonMenuLevelNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -77,7 +77,8 @@ public class HealthSystem : MonoBehaviour
         {
             Registry.AttackerSpawner?.LaneDelete(transform.position.y);
             Registry.AttackerSpawner?.AddDeadEnemy();
-            Registry.LevelController?.UpdateText();
+            TextSystem.UpdateEnemyKilledTextField(Registry.DeadEnemyAmount.ToString());
+            TextSystem.UpdateEnemyKilledLevelTextField(Registry.AttackerSpawner?.DeadLevelEnemyAmount.ToString() + "/" + Registry.AttackerSpawner?.MaxLevelEnemyAmount.ToString());
         }
 
         // Destroy gameobject

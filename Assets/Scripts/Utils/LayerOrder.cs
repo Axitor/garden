@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LayerOrder : MonoBehaviour
@@ -17,8 +15,8 @@ public class LayerOrder : MonoBehaviour
     private Renderer _renderer;
     
     /// <summary>
-                                  /// Actions on awake
-                                  /// </summary>
+    /// Actions on awake
+    /// </summary>
     void Awake()
     {
         // Cache component

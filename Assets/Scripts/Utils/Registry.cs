@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Axitor.Utils
@@ -11,7 +10,6 @@ namespace Axitor.Utils
         /// </summary>
         public static AttackerSpawner AttackerSpawner { get; set; }
         public static DefenderSpawner DefenderSpawner { get; set; }
-        public static ResourceSystem ResourceSystem { get; set; }
         public static LevelController LevelController { get; set; }
         public static LevelTimer LevelTimer { get; set; }
         public static float TotalSeconds { get { return _totalSeconds; } set { _totalSeconds = value; } }
